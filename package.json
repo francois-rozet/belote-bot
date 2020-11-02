@@ -1,0 +1,14 @@
+{
+	"name": "belote-bot",
+	"version": "0.0.1",
+	"description": "A Discord chat bot to play games with friends, built on top of discord.js.",
+	"main": "bot.js",
+	"scripts": {},
+	"keywords": [
+		"discord",
+		"bot",
+		"quiz"
+	],
+	"author": "François Rozet",
+	"license": "MIT"
+}

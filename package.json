@@ -10,5 +10,8 @@
 		"quiz"
 	],
 	"author": "François Rozet",
-	"license": "MIT"
+	"license": "MIT",
+	"dependencies": {
+		"discord.js": "^12.4.1"
+	}
 }

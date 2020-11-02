@@ -111,9 +111,14 @@ const commands = {
 		action: function(client, msg, args) {
 			args = argsParseInt(args, [1]);
 
-			const number = Math.min(100, Math.max(2, args[0] + 1));
+			const number = Math.min(100, Math.max(1, args[0] + 1));
 
-			return msg.channel.bulkDelete(number, true).catch(function(err) {
+			var temp = msg.channel.bulkDelete((number - 1) % 100 + 1, true);
+
+			for (let i = Math.floor((number - 1) / 100); i > 0; --i)
+				temp = temp.then(function() { return msg.channel.bulkDelete(100, true); });
+
+			return temp.catch(function(err) {
 				console.error(err);
 				msg.reply('there was an error trying to prune messages.');
 			});

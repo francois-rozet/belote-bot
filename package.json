@@ -12,6 +12,7 @@
 	"author": "François Rozet",
 	"license": "MIT",
 	"dependencies": {
-		"discord.js": "^12.4.1"
+		"discord.js": "^12.4.1",
+		"node-fetch": "^2.6.1"
 	}
 }
